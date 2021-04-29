@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+
+<hi1>Hello {{ name }}!!!!</hi1>
+
+<form action="add" method="post">
+{% csrf_token %}
+    Enter 1st number: <input type="text" name="num1"> <br>
+    Enter 2sd number: <input type="text" name="num2"> <br>
+    <input type="submit">
+
+</form>
+
+{% endblock %}
+
+</body>
+</html>
